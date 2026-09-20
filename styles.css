@@ -13,6 +13,7 @@ html {
 :root {
     --button: #596D48;
     --input-border: #E5E7EB;
+    --background: #FAFAFA;
 }
 
 body {
@@ -70,7 +71,7 @@ main > section {
 }
 
 .top {
-    background-color: #E5E7EB;
+    background-color: var(--background);
 
     display: flex;
     flex-direction: column;
@@ -85,7 +86,9 @@ main > section {
 }
 
 .form {
-    box-shadow: 0px 0px 2px 0px 2px black;
+    box-shadow: 0px 6px 5px rgb(0 0 0 / 0.2);
+    position: relative;
+    /* z-index: 10; */
 }
 
 form{
@@ -94,6 +97,7 @@ form{
     flex-direction: column;
     justify-content: space-between;
     padding-left: 1.5rem;
+    padding-bottom: 1.15rem;
     gap: 10px;
 }
 
@@ -117,18 +121,38 @@ form > h2 {
 .form-element input[type="email"],
 .form-element input[type="password"]{
     box-sizing: border-box;
-    width: 250px;
+    width: 300px;
     padding: 5px;
+    outline: none;
+    border: 1px solid var(--input-border);
+    font-size: 1.15rem;
+    border-radius: 5px;
+}
+
+.form-element input[type="text"]:focus,
+.form-element input[type="tel"]:focus,
+.form-element input[type="email"]:focus,
+.form-element input[type="password"]:focus{
+    border: 1px solid blue;
+    box-shadow: 1px 2px 2px rgb(0 0 0 / 0.2);
+}
+
+.form-element input[type="text"]:invalid,
+.form-element input[type="tel"]:invalid,
+.form-element input[type="email"]:invalid,
+.form-element input[type="password"]:invalid{
+    border: 1px solid red;
 }
 
 .form-element>label {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .bottom {
     padding-top: 40px;
     padding-left: 1.5rem;
     font-size: 1.25rem;
+    background-color: var(--background);
 }
 
 button {
