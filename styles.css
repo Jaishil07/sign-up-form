@@ -175,3 +175,7 @@ button {
     font-size: 1.15rem;
     padding: 5px 10px;
 }
+
+button:hover{
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 0.6);
+}
