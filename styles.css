@@ -60,11 +60,16 @@ body {
 
 main {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main > section {
+    flex: 1;
+    flex-shrink: 1;
 }
 
 .top {
-    height: 33%;
-
     background-color: #E5E7EB;
 
     display: flex;
@@ -75,3 +80,64 @@ main {
     padding-left: 1.5rem;
 }
 
+.top > p {
+    width: 70%;
+}
+
+.form {
+    box-shadow: 0px 0px 2px 0px 2px black;
+}
+
+form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1.5rem;
+    gap: 10px;
+}
+
+form > h2 {
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element input[type="text"],
+.form-element input[type="tel"],
+.form-element input[type="email"],
+.form-element input[type="password"]{
+    box-sizing: border-box;
+    width: 250px;
+    padding: 5px;
+}
+
+.form-element>label {
+    font-size: 1.25rem;
+}
+
+.bottom {
+    padding-top: 40px;
+    padding-left: 1.5rem;
+    font-size: 1.25rem;
+}
+
+button {
+    background-color: var(--button);
+    color: white;
+    width: 10rem;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.15rem;
+    padding: 5px 10px;
+}
