@@ -9,9 +9,16 @@
 </head>
 
 <body>
-    <div class="backgroun">
+    <div class="background">
         <div class="heading">
             <h2>MistBorn</h2>
+        </div>
+        <div class="credit">
+            <p>
+                Photo by <a
+                    href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Halie
+                    West</a> on <a href="https://unsplash.com/">Unsplash</a>
+            </p>
         </div>
     </div>
     <main>
@@ -21,10 +28,54 @@
             <p>You <em>know</em> you want to</p>
         </section>
         <section class="form">
-            
+            <form id="sign-up">
+                <h2>Let's do this!</h2>
+
+                <div class="form-row">
+                    <div class="form-element">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+
+                    <div class="form-element">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-element">
+                        <label for="mail">Email</label>
+                        <input type="email" id="mail" name="email">
+                    </div>
+
+                    <div class="form-element">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-element">
+                        <label for="pswd">First Name</label>
+                        <input type="password" id="pswd">
+                    </div>
+
+                    <div class="form-element">
+                        <label for="cpswd">Last Name</label>
+                        <input type="text" id="cpswd">
+                    </div>
+                </div>
+            </form>
         </section>
         <section class="bottom">
+            <div class="create-account">
+                <button type="submit" form="sign-up">Create Account</button>
+            </div>
 
+            <div class="log-in">
+                <p>Already have an account? <a href="">Log In</a></p>
+            </div>
         </section>
     </main>
 </body>
