@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Transcity";
-    src: url(fonts/Transcity.woff2) format(woff2) url(fonts/Transcity.woff) format(woff);
+    src: url(fonts/Transcity.woff2) format("woff2"),
+        url(fonts/Transcity.woff) format("woff");
     font-display: swap;
 }
 
@@ -35,14 +36,23 @@ body {
 .heading {
     font-family: "Transcity", Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
+    font-size: 2rem;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 
     position: relative;
-    top: 200px;
+    top: 130px;
     text-align: center;
 
     padding: 10px 0;
     background-color: rgb(0 0 0 / 0.6);
+}
+
+.heading>img {
+    height: 125px;
 }
 
 .credit {
@@ -65,7 +75,7 @@ main {
     flex-direction: column;
 }
 
-main > section {
+main>section {
     flex: 1;
     flex-shrink: 1;
 }
@@ -81,7 +91,7 @@ main > section {
     padding-left: 1.5rem;
 }
 
-.top > p {
+.top>p {
     width: 70%;
 }
 
@@ -91,7 +101,7 @@ main > section {
     /* z-index: 10; */
 }
 
-form{
+form {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -101,7 +111,7 @@ form{
     gap: 10px;
 }
 
-form > h2 {
+form>h2 {
     font-size: 1.75rem;
     text-align: center;
 }
@@ -119,7 +129,7 @@ form > h2 {
 .form-element input[type="text"],
 .form-element input[type="tel"],
 .form-element input[type="email"],
-.form-element input[type="password"]{
+.form-element input[type="password"] {
     box-sizing: border-box;
     width: 300px;
     padding: 5px;
@@ -132,7 +142,7 @@ form > h2 {
 .form-element input[type="text"]:focus,
 .form-element input[type="tel"]:focus,
 .form-element input[type="email"]:focus,
-.form-element input[type="password"]:focus{
+.form-element input[type="password"]:focus {
     border: 1px solid blue;
     box-shadow: 1px 2px 2px rgb(0 0 0 / 0.2);
 }
@@ -140,7 +150,7 @@ form > h2 {
 .form-element input[type="text"]:invalid,
 .form-element input[type="tel"]:invalid,
 .form-element input[type="email"]:invalid,
-.form-element input[type="password"]:invalid{
+.form-element input[type="password"]:invalid {
     border: 1px solid red;
 }
 
